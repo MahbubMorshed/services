@@ -1,8 +1,8 @@
 # Digital Art
 
-technology used this project
 
-## Available Scripts
+
+## Technology used in this project
 
 In the project directory, you can run:
 
