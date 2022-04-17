@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# Digital Art
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+
+## Technology used in this project
 
 In the project directory, you can run:
 
