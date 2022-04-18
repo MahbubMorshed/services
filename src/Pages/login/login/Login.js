@@ -1,8 +1,13 @@
+import { async } from "@firebase/util";
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import Loading from "../../shared/loading/Loading";
 import SocialLogin from "../socialLogin/SocialLogin";
 
 const Login = () => {
@@ -12,12 +17,21 @@ const Login = () => {
   const location = useLocation();
 
   let from = location.state?.from?.pathname || "/";
+  let errorElement;
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   if (user) {
     navigate(from, { replace: true });
+  }
+  if (loading || sending) {
+    <Loading />;
+  }
+
+  if (error) {
+    errorElement = <p className="text-danger">Error: {error.message}</p>;
   }
 
   const handleSubmit = (event) => {
@@ -27,9 +41,17 @@ const Login = () => {
 
     signInWithEmailAndPassword(email, password);
   };
+
   const navigateRegister = (event) => {
     navigate("/register");
   };
+
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    await sendPasswordResetEmail(email);
+    alert("Sent email");
+  };
+
   return (
     <div className="container w-50 mx-auto mt-2">
       <h2 className="text-dark text-center">Please login</h2>
@@ -51,21 +73,29 @@ const Login = () => {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-        <Button variant="dark" type="submit">
+        <Button variant="dark w-50 mx-auto d-block mb-2" type="submit">
           Login
         </Button>
       </Form>
+      {errorElement}
       <p>
         New to Digital Art ?{" "}
         <Link
           to="/register"
-          className="text-danger pe-auto text-decoration-none"
+          className="text-primary pe-auto text-decoration-none"
           onClick={navigateRegister}
         >
           Please register
+        </Link>
+      </p>
+      <p>
+        Forget password ?{" "}
+        <Link
+          to="/register"
+          className="text-primary pe-auto text-decoration-none"
+          onClick={resetPassword}
+        >
+          Reset password
         </Link>
       </p>
       <SocialLogin />
