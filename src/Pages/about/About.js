@@ -1,6 +1,8 @@
 import React from "react";
 import "./about.css";
 import me from "../../images/me.png";
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { FaArtstation } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -23,7 +25,13 @@ const About = () => {
         </p>
         <h5>Skill: </h5>
         <h6> Blender, Autodesk Maya, Unity, Photoshop </h6>
-        <a></a>
+        <a href="https://www.linkedin.com/in/mahbub-morshed/">
+          <AiOutlineLinkedin />
+
+          <a href="https://www.artstation.com/mahbub">
+            <FaArtstation />
+          </a>
+        </a>
       </div>
     </div>
   );
