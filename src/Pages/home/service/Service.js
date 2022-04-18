@@ -1,9 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./service.css";
+import { FaArtstation } from "react-icons/fa";
 
 const Service = ({ service }) => {
-  const { id, name, img, description, price } = service;
+  const { id, name, img, description, price, src } = service;
   const navigate = useNavigate();
   const handleDetail = (id) => {
     navigate(`/service/${id}`);
@@ -16,6 +17,10 @@ const Service = ({ service }) => {
       <p>
         <small>{description}</small>
       </p>
+      <a href={src}>
+        Full view
+        <FaArtstation />
+      </a>
       <button onClick={() => handleDetail(id)} className="btn btn-primary">
         Book: {name}
       </button>

@@ -4,42 +4,49 @@
         "name": "Autodesk Maya (Model)", 
         "price": 100, 
         "description": "We provide a realistic Maya model for your project.", 
-        "img": " https://i.ibb.co/bvtsFyJ/services-1.png" 
+        "img": " https://i.ibb.co/bvtsFyJ/services-1.png" ,
+        "src": "https://www.artstation.com/artwork/XlGPY"
     },
     { 
         "id": 2, 
         "name": "Blender (Model)", 
         "price": 1000, 
         "description": "We provide a realistic  model with Blender a open source softwere  for your project.", 
-        "img": "https://i.ibb.co/sw6jQPN/services-2.png" 
+        "img": "https://i.ibb.co/sw6jQPN/services-2.png",
+        "src": "https://www.artstation.com/artwork/05AJw"
     },
     { 
         "id": 3, 
         "name": "Render with Blender(cycle)", 
         "price": 1000, 
         "description": "we provide render your small project wit rendering with blender cycle a completely free softwere.", 
-        "img": "https://i.ibb.co/jVBcWXt/services-3.png" 
+        "img": "https://i.ibb.co/jVBcWXt/services-3.png" ,
+        "src": "https://www.artstation.com/artwork/05AJw"
     },
     { 
         "id": 4, 
         "name": "Render with Maya(mental ray)", 
         "price": 2000, 
         "description": " we provide render your small project wit rendering with Maya mental ray.", 
-        "img": "https://i.ibb.co/P5nv5Kg/services-4.png" 
+        "img": "https://i.ibb.co/P5nv5Kg/services-4.png",
+        "src": "https://www.artstation.com/artwork/l2kQk"
     },
     { 
         "id": 5, 
         "name": "Environment render Unity", 
         "price": 100, 
         "description": "we provide render out put your game project  rendering with Unity.", 
-        "img": "https://i.ibb.co/7NmLjvm/services-5.png" 
+        "img": "https://i.ibb.co/7NmLjvm/services-5.png" ,
+        "src": "https://www.artstation.com/artwork/Xlzyw"
+        
     },
     { 
         "id": 6, 
         "name": "Lowpoly game asset (Blender)", 
         "price": 100, 
         "description": "We also provide props model for your game project", 
-        "img": "https://i.ibb.co/30QrLK9/services-6.png" 
+        "img": "https://i.ibb.co/30QrLK9/services-6.png" ,
+        "src": "https://www.artstation.com/artwork/wbrB5"
     }
   ]
   
