@@ -1,0 +1,11 @@
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.img-container {
+    width: 300px;
+    margin: auto;
+} 
+.img-container img{
+    width: 100%;
+}
